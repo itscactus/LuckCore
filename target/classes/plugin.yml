@@ -1,0 +1,12 @@
+name: LuckCore
+version: '1.0-SNAPSHOT'
+main: net.luckmc.core.Main
+authors: [wikmor, itscactus]
+api-version: '1.13'
+depend: [LuckPerms]
+softdepend: [PlaceholderAPI]
+commands:
+  luckcore:
+    description: Reload the configuration.
+    permission: luckcore.reload
+    usage: "Usage: /luckcore reload"
