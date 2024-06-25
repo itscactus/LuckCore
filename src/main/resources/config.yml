@@ -1,6 +1,3 @@
-# LPC Configuration
-# Please read the https://luckperms.net/wiki/Prefixes,-Suffixes-&-Meta before you set up.
-#
 # Placeholders:
 # {message} - the chat message
 # {name} - the player's name
@@ -12,18 +9,13 @@
 # {suffixes} - the player's suffixes sorted by the highest priority
 # {username-color} - the player's or the group's username color
 # {message-color} - the player's or the group's message color
-#
-# To reload the configuration, run '/lpc reload' command. Make sure you have the 'lpc.reload' permission assigned.
-# More information can be found at https://www.spigotmc.org/resources/68965.
 chat-format: "{prefix}{name}&r: {message}"
 
-# Set the format per group.
-# Note: Option for more advanced users. Remove comments to run.
 group-formats:
 #  default: "[default] {name}&r: {message}"
 #  admin: "[admin] {name}&r: {message}"
 
-# LuckMC Settings
+# LuckMC Chat Settings
 global-prefix: "&a[{world}]" # When string starts with !! sends the message to all players.
 world-prefix: "&a[G]" # When string stars with ! sends the message to all players in the same world
 radius-prefix: "" # When the string starts with nothing sends the message to players in 100 block radius

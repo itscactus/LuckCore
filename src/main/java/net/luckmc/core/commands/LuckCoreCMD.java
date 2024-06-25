@@ -4,10 +4,16 @@ import net.luckmc.core.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
-public class LuckCoreCMD implements CommandExecutor {
+public class LuckCoreCMD implements CommandExecutor, TabExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -18,4 +24,14 @@ public class LuckCoreCMD implements CommandExecutor {
         }
         return false;
     }
+
+    @Override
+    public List<String> onTabComplete(final CommandSender sender, final Command command, final String alias, final String[] args) {
+        if(command.getName().equalsIgnoreCase("luckcore"))
+            if(args.length == 1)
+                return Collections.singletonList("reload");
+
+        return new ArrayList<>();
+    }
+
 }

@@ -33,15 +33,7 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginCommand("luckcore").setExecutor(new LuckCoreCMD());;
     }
 
-    @Override
-    public List<String> onTabComplete(final CommandSender sender, final Command command, final String alias, final String[] args) {
-        if(command.getName().equalsIgnoreCase("luckcore"))
-            if(args.length == 1)
-                return Collections.singletonList("reload");
-
-        return new ArrayList<>();
-    }
-
+    
     public String colorize(final String message) {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
